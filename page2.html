@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Currency Converter</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <style>
+
+    body {
+      background-image: url('merney.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+
+    .converter-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .converter-form {
+      max-width: 300px;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 5px;
+
+      }
+
+    .converter-form .form-group {
+      margin-bottom: 20px;
+    }
+    
+    .result {
+      text-align: center;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container converter-container">
+  <div class="converter-form">
+
+    <h2 class="text-center mb-4">Currency Converter</h2>
+    <div class="form-group">
+
+      <label for="amount">Amount in Philippine Peso:</label>
+        <input type="number" class="form-control" id="amount" value="100" readonly>
+      </div>
+
+      <button type="button" class="btn btn-primary btn-block" onclick="convertToEuro()">Convert to Euro</button>
+      <button type="button" class="btn btn-primary btn-block mt-2" onclick="convertToPound()">Convert to Pound</button>
+      <div id="result" class="result mt-4"></div>
+    </div>
+  </div>
+
+  
+  <script>
+
+    function convertToEuro() {
+      var amount = 100;
+      var euro = amount * 0.011;
+
+      document.getElementById("result").textContent = "Equivalent amount in Euro: " + euro;
+    }
+
+    function convertToUSD() {
+      var amount = 100;
+      var pound = amount * 0.0091;
+
+      document.getElementById("result").textContent = "Equivalent amount in Pound: " + pound;
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
